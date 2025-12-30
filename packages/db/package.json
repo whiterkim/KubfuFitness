@@ -1,0 +1,13 @@
+{
+  "name": "@fitness/db",
+  "private": true,
+  "devDependencies": {
+    "prisma": "^7.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.0.0"
+  },
+  "scripts": {
+    "prisma": "prisma"
+  }
+}
