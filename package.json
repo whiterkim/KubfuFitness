@@ -1,0 +1,22 @@
+{
+  "name": "kubfu-app",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "web:start": "pnpm --filter @fitness/web dev",
+    "api:start": "pnpm --filter @fitness/api start",
+    "db:up": "docker compose -f infra/docker-compose.yml up -d",
+    "db:down": "docker compose -f infra/docker-compose.yml down",
+    "db:migrate": "pnpm --filter @fitness/db prisma migrate dev",
+    "db:studio": "pnpm --filter @fitness/db prisma studio",
+    "db:seed": "pnpm --filter @fitness/db prisma db seed"
+  },
+  "devDependencies": {
+    "prisma": "^7.2.0",
+    "turbo": "^2.7.2"
+  }
+}
